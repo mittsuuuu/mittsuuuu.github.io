@@ -1,0 +1,288 @@
+@charset "UTF-8";
+
+body {
+    /* background-color: #fff8f1; */
+    background-color: white;
+}
+#header-column {
+    display: flex;
+    justify-content: space-around;
+
+    color: white;
+}
+#header-left {
+    flex: 1;
+    flex-basis: 25%;
+
+    background-color: red;
+}
+#header-center {
+    flex: 2;
+    flex-basis: 25%;
+
+    background-color: green;
+}
+#header-right {
+    flex: 3;
+    flex-basis: 25%;
+
+    background-color: blue;
+}
+#header-forth {
+    flex: 4;
+    flex-basis: 25%;
+
+    background-color: thistle;
+}
+
+#main-column {
+    display: flex;
+    justify-content: space-around;
+}
+#left-content {
+    flex: 1;
+    flex-basis: 15%;
+
+    min-width: 200px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+
+    font-family: 'Noto Sans JP', sans-serif;
+
+    background-color: #fff8f1;
+    /* background-color: white; */
+}
+#center-content {
+    flex: 2;
+    flex-basis: 85%;
+
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+
+    font-family: 'Noto Sans JP', sans-serif;
+
+    background-color: #fff8f1;
+    /* background-color: white; */
+}
+
+#header-title {
+    font-family: "GFS Didot";
+    font-size: 50px;
+    font-style: italic;
+
+    text-align: center;
+
+    background-color: #fff8f1;
+    /* background-color: white; */
+}
+
+.subTitle {
+    max-width: 80%;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+
+    font-size: 25px;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+
+    background-color: rgb(0, 220, 145);
+}
+
+.list {
+    padding-left: 5px;
+}
+
+.subject {
+    margin-top: 5px;
+    max-width: 80%;
+    padding: 5px 5px 0 5px;
+
+    font-size: 20px;
+
+    border-bottom: 2px solid;
+}
+
+.content {
+    max-width: 80%;
+    padding-left: 5px;
+}
+
+.paragraph {
+    max-width: 80%;
+    margin-top: 7px;
+    padding-left: 5px;
+}
+
+.license {
+    list-style: none;
+}
+
+#github, #twitter, #instagram{
+    min-width: fit-content;
+    width: 7%;
+    padding-left: 5px;
+
+    /* text-align: center; */
+}
+#github, #twitter {
+    margin: 5px 0;
+}
+#twitter:hover {
+    margin-bottom: 3px;
+    border-bottom: 2px solid;
+    border-color: #00acee;
+}
+#instagram:hover {
+    margin-bottom: 3px;
+    border-bottom: 2px solid;
+    border-image: conic-gradient(#4c64d3, #cf2e92, #f26939, #ffdd83)1;
+}
+
+a { /* リンクの色を変えないようにしている */
+    color: inherit;
+    text-decoration: none;
+}
+
+/* アコーディオンUIの実装 */
+.buttonMore {
+    width: 100%;
+    color: white;
+    background-color: #333;
+
+    border-radius: 5px;
+
+    text-align: center;
+}
+.buttonMore:hover { /*buttonにカーソルがあったときの処理*/
+    background-color: gray;
+}
+.buttonMore {
+    max-width: 80%;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+
+    font-size: 10px;
+}
+.menu {
+    width: 100%;
+}
+.menu input{
+    display: none;
+}
+.menu label {
+    cursor :pointer;
+    display: block;
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+    margin: 0;
+    padding: 5px 0;
+  }
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu li {
+    height: 0;
+    overflow-y: hidden;
+    transition: padding-bottom 0.5s, padding-top 0.5s; /*閉じるときのアニメーション*/
+    -webkit-transition: padding-bottom 0.5s, padding-top 0.5s;
+    -moz-transition: padding-bottom 0.5s, padding-top 0.5s;
+    -ms-transition: padding-bottom 0.5s, padding-top 0.5s;
+    -o-transition: padding-bottom 0.5s, padding-top 0.5s;
+}
+.menu li {
+    max-width: 80%;
+}
+#menu_bar01:checked ~ #links01 li {  /* 表示されるリストの設定 */
+    padding: 5px 0 5px 5px;
+    height: auto;
+    font-size: 15px;
+    opacity: 1;
+    background: #f1f1f1;
+    border-bottom: 1px solid;
+}
+#menu_bar01:checked ~ #links01 li:last-child {
+    margin-bottom: 20px;
+}
+.menu label:after { /* 閉じた状態の矢印描写 */
+    content:"";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: #fff 2px solid;
+    border-right: #fff 2px solid;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+    position:absolute;
+    right: 2%;
+    top: 0;
+    bottom: 15%;
+    margin: auto;
+}
+.menu input[type=checkbox]:checked + label:after{ /* 開いた状態での矢印描写 */
+    content:"";
+    display:block;
+    width:8px;
+    height:8px;
+    border-top: #fff 2px solid;
+    border-right: #fff 2px solid;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position:absolute;
+    right: 2%;
+    top: 7%;
+    bottom: 0;
+    margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+    #main-column {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    #left-content, #center-content {
+        flex-direction: column-reverse;
+    }
+    #left-content {
+        display: none;
+    }
+    #center-content {
+        margin: 5px;
+    }
+
+    p, li {
+        font-size: 1.5rem;
+    }
+
+    .subTitle, .subject, .paragraph, .content {
+        max-width: none;
+    }
+    .subject {
+        margin-top: 15px;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .paragraph, .content, .listcontent {
+        font-size: 0.8rem;
+    }
+    
+
+    .buttonMore, .menu li {
+        max-width: 100%;
+    }
+
+    #twitter, #instagram {
+        font-size: 0.1rem;
+    }
+}

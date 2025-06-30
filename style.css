@@ -14,11 +14,12 @@ body {
 .left-column {
     flex: 3;
     min-width: 60px; /* 隠れているときもボタン幅を確保 */
+    max-width: 300px; /* 左カラムの最大幅を固定 */
     position: relative;
     transition: flex 0.5s ease;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
-    margin: 10px; /* 外側に余白 */
+    margin: 20px; /* 外側に余白 */
     padding: 20px; /* 内側に余白 */
     box-sizing: border-box; /* paddingを幅に含める */
 }
@@ -99,8 +100,8 @@ body {
 }
 
 #toc {
-    padding: 20px;
-    padding-top: 60px; /* ボタンとの余白を確保 */
+    padding: 10px;
+    padding-top: 50px; /* ボタンとの余白を確保 */
     transition: opacity 0.3s ease;
 }
 
@@ -117,5 +118,5 @@ body {
 }
 
 #toc li a:hover {
-    background-color: #f0f0f0;
+    background-color: #969696;
 }

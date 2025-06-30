@@ -16,11 +16,43 @@
     </head>
 
     <body>
-        <div>
-            <h1>佐藤光流のポートフォリオ</h1>
-        </div>
-        <div id="app">
-            <h1>{{ message }}</h1>
+        <div id="app" class="container">
+            <div class="left-column" :class="{ 'hidden': !isLeftColumnVisible }">
+                <button @click="toggleLeftColumn" class="toggle-btn" aria-label="Toggle navigation">
+                    <span class="hamburger-icon"></span>
+                    <span class="hamburger-icon"></span>
+                    <span class="hamburger-icon"></span>
+                </button>
+                <div id="toc">
+                    <h2>目次</h2>
+                    <ul>
+                        <li v-for="item in tocItems" :key="item.id">
+                            <a :href="'#' + item.id" @click.prevent="scrollTo(item.id)">{{ item.text }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-column">
+                <div>
+                    <h1 class="title">{{displayedMessage}}</h1>
+                </div>
+                <div id="content">
+                    <div class="contents">
+                        <h2>自己紹介</h2>
+                        <p>ここに自己紹介文が入ります。</p>
+                    </div>
+
+                    <div class="contents">
+                        <h2>スキル</h2>
+                        <p>ここにスキルに関する記述が入ります。</p>
+                    </div>
+
+                    <div class="contents">
+                        <h2>制作物</h2>
+                        <p>ここに制作物に関する記述が入ります。</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <script src="main.js"></script>

@@ -1,6 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     display: flex;
     position: relative; /* ボタンの位置決めの基準にする */
+    gap: 20px; /* カラム間の余白 */
+
+    background-color: #f9f9f9;
 }
 
 .left-column {
@@ -9,6 +17,10 @@
     position: relative;
     transition: flex 0.5s ease;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    margin: 10px; /* 外側に余白 */
+    padding: 20px; /* 内側に余白 */
+    box-sizing: border-box; /* paddingを幅に含める */
 }
 
 .left-column.hidden {
@@ -37,7 +49,15 @@
   /* transition をつけると、スタイルの変化が滑らかになる */
   transition: all 0.3s ease;
   font-size: 50px; /* 初期サイズ */
-  min-height: 60px; /* コンテンツが空でも高さを維持 */
+  min-height: 75px; /* コンテンツが空でも高さを維持 */
+  padding: 10px;
+
+  border: none;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+
+  word-break: keep-all; /* 日本語の単語途中での改行を防ぎ、スペースでの改行を許可 */
 }
 .contents {
   margin-bottom : 40px;
@@ -45,9 +65,11 @@
   /* text-align: center; */
   padding: 2rem;
   margin-top: 2rem;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
+  border: none;
   border-radius: 5px;
   background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
 }
 
 .toggle-btn {

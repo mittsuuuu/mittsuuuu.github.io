@@ -41,8 +41,8 @@ body {
 }
 
 .right-column {
+    margin-right: 20px; /* 右端に余白を追加 */
     flex: 7;
-    /* 右側のカラムのスタイル */
     transition: flex 0.5s ease;
 }
 
@@ -119,4 +119,8 @@ body {
 
 #toc li a:hover {
     background-color: #969696;
+}
+::selection {                                                     
+    background: gray; /* 選択時の背景色を灰色に */
+    color: white;    /* 選択時の文字色を白色に */               
 }

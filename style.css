@@ -15,13 +15,19 @@ body {
     flex: 3;
     min-width: 60px; /* 隠れているときもボタン幅を確保 */
     max-width: 300px; /* 左カラムの最大幅を固定 */
-    position: relative;
+    position: relative; /* stickyを解除し、通常のフローに戻す */
     transition: flex 0.5s ease;
-    overflow: hidden;
+    /* overflow: hidden; */ /* stickyが効かない原因になる可能性があるので削除 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
     margin: 20px; /* 外側に余白 */
-    padding: 20px; /* 内側に余白 */
+    padding: 5px 20px; /* 内側に余白 */
     box-sizing: border-box; /* paddingを幅に含める */
+}
+
+.left-column-content-wrapper {
+    position: sticky;
+    top: 20px; /* スクロール時に上から20pxの位置で固定 */
+    transition: top 0.3s ease-out; /* スムーズなアニメーション */
 }
 
 .left-column.hidden {
@@ -103,6 +109,7 @@ body {
     padding: 10px;
     padding-top: 50px; /* ボタンとの余白を確保 */
     transition: opacity 0.3s ease;
+    z-index: 5; /* 他の要素の上に表示 */
 }
 
 #toc ul {
@@ -119,8 +126,34 @@ body {
 
 #toc li a:hover {
     background-color: #969696;
+    color: white;
 }
 ::selection {                                                     
     background: gray; /* 選択時の背景色を灰色に */
     color: white;    /* 選択時の文字色を白色に */               
+}
+
+.skill-button {
+    display: inline-block;
+    padding: 0px 5px;
+    color: black;
+    text-decoration: none;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+.skill-button:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+}
+
+.skill-button:visited {
+    color: white;
+}
+
+.links {
+    color: inherit;
 }

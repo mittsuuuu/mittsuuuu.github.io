@@ -18,18 +18,20 @@
     <body>
         <div id="app" class="container">
             <div class="left-column" :class="{ 'hidden': !isLeftColumnVisible }">
-                <button @click="toggleLeftColumn" class="toggle-btn" aria-label="Toggle navigation">
-                    <span class="hamburger-icon"></span>
-                    <span class="hamburger-icon"></span>
-                    <span class="hamburger-icon"></span>
-                </button>
-                <div id="toc">
-                    <h2>目次</h2>
-                    <ul>
-                        <li v-for="item in tocItems" :key="item.id">
-                            <a :href="'#' + item.id" @click.prevent="scrollTo(item.id)">{{ item.text }}</a>
-                        </li>
-                    </ul>
+                <div class="left-column-content-wrapper">
+                    <button @click="toggleLeftColumn" class="toggle-btn" aria-label="Toggle navigation">
+                        <span class="hamburger-icon"></span>
+                        <span class="hamburger-icon"></span>
+                        <span class="hamburger-icon"></span>
+                    </button>
+                    <div id="toc">
+                        <h2>目次</h2>
+                        <ul>
+                            <li v-for="item in tocItems" :key="item.id">
+                                <a :href="'#' + item.id" @click.prevent="scrollTo(item.id)">{{ item.text }}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="right-column">
@@ -46,23 +48,58 @@
 
                     <div class="contents">
                         <h2>趣味</h2>
-                        <p>種民間する記述です</p>
+                        <div class="hobby_content">
+                            <h3>スポーツ</h3>
+                            <p>体動かすこと全般が好きです．<br>
+                                サッカー(年中〜小2)，水泳(小2〜小6)，バドミントン(中1〜現在)を行ってきました．<br>
+                                大学に入ってからスキューバダイビングを始めました．
+                                サイクリングもたまに行きます．
+                            </p>
+                        </div>
+                        <div class="hobby_content">
+                            <h3>読書</h3>
+                            <p>
+                                小学5年次の担任の影響で活字を嗜むようになりました．<br>
+                                初めて読んだ小説は "さすらい猫ノアの伝説(著:重松 清)"だったと記憶しています．<br>
+                            </p>
+                        </div>
                     </div>
 
                     <div class="contents">
                         <h2>スキル</h2>
-                        <p>各プログラミング言語などスキルに関する紹介です．<br>
-                            ボタンを押すと詳細が表示されます．</p>
+                        <p>使用したことのあるプログラム言語，エンジンなどの紹介です<br>
+                            ボタンを押すと詳細が表示されます</p>
                         <ul id="skills">
                             <li>C++</li>
+                                <p>競プロで使います</p>
+                                <p>Paizaアカウント =></p>
+                                <p>AtCoderアカウント =></p>
                             <li>C#</li>
+                                <p>Unityで使います</p>
                             <li>Java</li>
+                                <p>
+                                    大学の授業でプログラムの基礎を学びました<br>
+                                    個人的に JSP/Servlet の勉強をしています<br>
+                                </p>
                             <li>Python</li>
+                                <p>
+                                    計測データの正規化，フィルタをかけるなどに使用しました<br>
+                                    ニューラルネットワークの勉強にも使用しました<br>
+                                    あまり好きじゃない...<br>
+                                </p>
                         </ul>
                         <ul>
                             <li>Unity</li>
+                                <p>
+                                    ゲーム制作などに使用しています<br>
+                                    制作物の詳しい紹介は下の<a href="#section-3" @click.prevent="scrollTo('section-3')" class="skill-button">制作物</a>に記載しています
+                                </p>
                             <li>Docker</li>
                             <li>Linux</li>
+                                <p>
+                                    Unix系の基本的なコマンドは使用できます<br>
+                                    ラズパイにUbuntuを入れてサーバ化したりして遊んでいます<br>
+                                </p>
                         </ul>
                     </div>
 
@@ -79,11 +116,12 @@
                             <li>普通自動車免許(AT)</li>
                         </ul>
                     </div>
-                </div>
-                    
+
                     <div class="contents">
-                        <h2>保有資格</h2>
-                    </p>
+                        <h2>サービスのURL</h2>
+                        <p><a href="https://mitsuru.host/" class="links" target="_blank">My Site</a></p>
+                        <p><a href="https://github.com/mittsuuuu/" class="links" target="_blank">GitHub</a></p>
+                        <p><a href="https://atcoder.jp/users/mittsuuuu" class="links" target ="_blank">AtCoder</a></p>
                     </div>
                 </div>
             </div>

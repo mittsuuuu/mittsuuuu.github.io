@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Book Title 1",
+    "author": "Author 1",
+    "description": "This is a short description of the first book. It gives a glimpse into the content.",
+    "imageUrl": "/images/book1.png",
+    "rating": 4,
+    "review": "A fantastic read! Highly recommended.",
+    "amazonLink": "#"
+  },
+  {
+    "id": 2,
+    "title": "Book Title 2",
+    "author": "Author 2",
+    "description": "Here is a brief summary of the second book, highlighting its main themes and plot.",
+    "imageUrl": "https://via.placeholder.com/300x300.png?text=Book+2",
+    "rating": 5,
+    "review": "Couldn't put it down!",
+    "amazonLink": "#"
+  },
+  {
+    "id": 3,
+    "title": "Book Title 3",
+    "author": "Author 3",
+    "description": "A concise overview of the third book in the list, touching upon its genre and style.",
+    "imageUrl": "https://via.placeholder.com/300x300.png?text=Book+3",
+    "rating": 3,
+    "review": "An interesting concept, but the execution could have been better.",
+    "amazonLink": "#"
+  },
+  {
+    "id": 4,
+    "title": "Book Title 4",
+    "author": "Author 4",
+    "description": "This is a description for the fourth book, designed to pique the reader's interest.",
+    "imageUrl": "https://via.placeholder.com/300x300.png?text=Book+4",
+    "rating": 4,
+    "review": "A solid read.",
+    "amazonLink": "#"
+  },
+  {
+    "id": 5,
+    "title": "Book Title 5",
+    "author": "Author 5",
+    "description": "A summary of the fifth book, providing just enough detail to be intriguing.",
+    "imageUrl": "https://via.placeholder.com/300x300.png?text=Book+5",
+    "rating": 5,
+    "review": "Absolutely loved it!",
+    "amazonLink": "#"
+  },
+  {
+    "id": 6,
+    "title": "Book Title 6",
+    "author": "Author 6",
+    "description": "An engaging synopsis of the sixth book, encouraging you to discover more.",
+    "imageUrl": "https://via.placeholder.com/300x300.png?text=Book+6",
+    "rating": 2,
+    "review": "Not my cup of tea.",
+    "amazonLink": "#"
+  }
+]
